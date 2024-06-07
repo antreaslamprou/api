@@ -19,6 +19,10 @@ def add_column_names(cursor, rows):
     return result
 
 
+@app.route("/")
+def index():
+    return "Asou Elenaaa!"
+
 #View, Add, Edit and Delete Users
 @app.route("/users", defaults={"user_id" : None}, methods=['GET', 'POST']) 
 @app.route('/users/<int:user_id>', methods=['GET', 'PUT', 'DELETE'])
